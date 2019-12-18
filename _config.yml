@@ -1,0 +1,77 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: D3aday
+email: nrf@nickfrazier.com
+description: >- # this means to ignore newlines until "baseurl:"
+  A collection of short exercises to practice what you've learned after you've
+  learned the basics of D3.js
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# declare the exercises collection
+collections:
+  exercises:
+    output: true
+    sort_by: index
+
+# Build settings
+# theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+### Enabling comments (via Disqus)
+
+# Optionally, if you have a Disqus account, you can tell Jekyll to use it to show a comments section below each post.
+
+# To enable it, add the following lines to your Jekyll site:
+
+# ```yaml
+#   disqus:
+#     shortname: my_disqus_shortname
+# ```
+
+# You can find out more about Disqus' shortnames [here](https://help.disqus.com/customer/portal/articles/466208).
+
+# Comments are enabled by default and will only appear in production, i.e., `JEKYLL_ENV=production`
+
+# If you don't want to display comments for a particular post you can disable them by adding `comments: false` to that post's YAML Front Matter.
