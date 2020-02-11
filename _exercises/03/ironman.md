@@ -23,10 +23,10 @@ The complete data is below (JSON format).
 
 My solution can be found on [codepen](https://codepen.io/fraziern/pen/pooLGQL).
 
-### Standard D3aday Instructions
+### My usual constraints
 
-1. Build your version of the inspiration viz or my solution viz
+1. Build a version of the inspiration viz, simplifying if necessary to keep it relatively quick
 1. Use only vanilla HTML, CSS, and JavaScript, as well as D3.js (I used v.5.0)
-1. Some raw data is provided, or feel free to use your own
+1. Where possible, use real-world raw data
 
-Good luck!
+Give it a try!

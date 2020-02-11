@@ -1,18 +1,19 @@
 ---
 layout: page
-title: About
+title: About D3aday
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+D3aday.dev was borne out of a desire to get better at data visualizations for the web. The best way to get better at anything, I think, is through intentional practice. And the best way to practice is to do it a little bit each day. With an emphasis on "a little bit." Ten minutes a day is better than five. But five minutes a day is better than zero. And I've found that when I keep my time commitments short, I tend to be much more successful at sticking to them.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+My tool of choice for data visualizations for the web is D3.js. The problem with D3, though, is that it's hard. And I think there's always room to add to the body of knowledge available for folks who are learning it and using it. So while my first goal in creating this project was to practice using D3 every day, my second goal was to share what I learned and provide a structure for others to practice with too.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+For almost every exercise, the starting point is an existing data visualization to replicate, in whole or in part. Sometimes the goal is just to replicate an interesting feature. Sometimes the starting point is a previous, unfinished exercise. Sometimes the starting point isn't a visualization at all, but a work of art or artifact from the physical world. Inspiration can come from anywhere, if you're open to it.
 
+The three constraints applied to each exercise are as follows:
 
-[jekyll-organization]: https://github.com/jekyll
+1. Build a version of the inspiration viz, simplifying if necessary to keep it relatively quick
+1. Use only vanilla HTML, CSS, and JavaScript, as well as D3.js (I used v.5.0)
+1. Where possible, use real-world raw data, and make it accessible if it's not already
+
+I'd love for you to give them a try!

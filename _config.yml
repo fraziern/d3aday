@@ -21,18 +21,18 @@
 title: D3aday
 email: nrf@nickfrazier.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A collection of short exercises to practice what you've learned after you've
-  learned the basics of D3.js
+  Bite-sized data visualization exercises using D3.js, with inspiration from the best of the web and beyond.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://www.d3aday.dev" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: nrf
+github_username:  fraziern
+codepen_username: fraziern
 
 # declare the exercises collection
 collections:
   exercises:
     output: true
-    sort_by: index
+#    sort_by: index
 
 # Build settings
 # theme: minima

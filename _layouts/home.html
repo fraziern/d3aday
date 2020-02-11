@@ -8,7 +8,7 @@ layout: default
   {%- endif -%}
 
   {{ content }}
-
+<div class="posts">
   {%- if site.exercises.size > 0 -%}
     <ul class="post-list">
       {%- for exercise in site.exercises -%}
@@ -16,12 +16,12 @@ layout: default
         <a class="post-link" href="{{ exercise.url | relative_url }}">
           <img src="{{ exercise.thumbnail_path }}" alt="{{ exercise.thumbnail_alttext }}">
         </a>
-          <h6>{{ exercise.index | prepend: '0' | slice: -2, 2 }}</h6>
+          <h6>{{ forloop.index | prepend: '0' | slice: -2, 2 }}</h6>
           <h5>{{ exercise.title | escape }}</h5>
       </li>
       {%- endfor -%}
     </ul>
-
+  </div>
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
 
