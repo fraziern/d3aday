@@ -32,7 +32,7 @@ codepen_username: fraziern
 collections:
   exercises:
     output: true
-#    sort_by: index
+    sort_by: index
 
 # Build settings
 # theme: minima

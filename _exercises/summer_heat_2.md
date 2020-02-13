@@ -97,7 +97,7 @@ function createChart(d) {
 
 My complete code and working example is available on [codepen](https://codepen.io/fraziern/pen/LYEePWe).
 
-### My usual constraints
+#### My usual constraints
 
 1. Build a version of the inspiration viz, simplifying if necessary to keep it relatively quick
 1. Use only vanilla HTML, CSS, and JavaScript, as well as D3.js (I used v.5.0)

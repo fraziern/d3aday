@@ -1,29 +1,37 @@
 ---
 layout: post
-title:  "Baby Names II"
+title:  "Slopegraph (pt. 1)"
 date:   2019-12-10 06:38:38 -0500
 tags: line-graph fancy-labels slopegraph
 thumbnail_path: /assets/img/babynames_2_inspiration.jpg
 thumbnail_alttext: Baby Names II
 index: 06
 ---
-For this exercise I wanted to create a "slopegraph," taking inspiration from the [Top Languages Over Time](https://octoverse.github.com/#footnote--top-languages-over-time) chart at Github's [State of the Octoverse](https://octoverse.github.com/) page (which, by the way, contains a wealth of other data-nerd goodies).
+### The Inspiration
+
+For this exercise we're creating a "slopegraph," taking inspiration from the [Top Languages Over Time](https://octoverse.github.com/#footnote--top-languages-over-time) chart at Github's [State of the Octoverse](https://octoverse.github.com/) page (which, by the way, contains a wealth of other data-nerd goodies).
 
 ![Top Languages Over Time](/assets/img/babynames_2_inspiration.jpg)
 
 The idea with slopegraphs is that it allows you to elegantly depict changes in order or rank over time. It's easy to see, in this example, that JavaScript has consistently been the most popular language on Github, and conversely that Objective C has struggled to stay in the top 10. Charlie Park's [Slopegraphs page](https://charliepark.org/slopegraphs/) has more information than you could ever want about the form.
 
-One feature you may notice in the Github chart is that the labelling is not completely consistent. All of the lines that appear in the latest Top 10 list are labelled along the right edge of the chart, but Objective C's line, which ends prematurely, had to be labelled right smack dab in the middle of everything. I wanted to use this labelling strategy as well in my viz, and make sure it was programmatic so that it would still work if the data changed. 
+One feature you may notice in the Github chart is that the labelling is not completely consistent. All of the lines that appear in the latest Top 10 list are labelled along the right edge of the chart, but Objective C's line, which ends prematurely, had to be labelled right smack dab in the middle of everything.
+
+### The Exercise
+
+Using the [baby name dataset](https://gist.githubusercontent.com/fraziern/6ca21ed36b217894901256aeab822f00/raw/b00b79f03314505c96403cd7b34475c694c124bf/popular_names_ssa.csv), create a slopegraph with labels at the ends of each line.
 
 The challenge here is to place the line labels at the right spot along the line - which would be either where the name's rank last appears in the top 10, or where the end of the graph's X-axis is reached. This feature is what makes this exercise more interesting than a straightforward multi-line graph.
+
+### A Solution
 
 My solution is shown below.
 
 ![Baby Names Rankings](/assets/img/babynames_2_solution.jpg)
 
-You may notice there is a missing data point in the latest year, for Harper. That's because Harper fell out of the top 10 in 2017, then made a comeback. So there's no real line to draw, just a single point. Fixing this will be a separate exercise. (There's another annoyance I have with this code, looking back, from a stylistic point of view, and that gets fixed too in the next iteration. See if you can guess what it is.)
+You may notice there is a short line at the bottom, then a missing data point in the latest year, for Harper. That's because Harper fell out of the top 10 in 2017, then made a comeback. So there's no real line to draw between 2016 and 2018, just a single point. Fixing this will be a separate exercise. (There's another annoyance I have with this code, looking back, from a stylistic point of view, and that gets fixed too in the next iteration. See if you can guess what it is once you've looked over my solution.)
 
-Here's how I solved this exercise. The complete HTML/CSS/JS code and working example are on [codepen](https://codepen.io/fraziern/pen/PowjQEG).
+Here's how I solved this exercise (as usual, I encourage you to attempt it first without peeking). The complete HTML/CSS/JS code and working example are on [codepen](https://codepen.io/fraziern/pen/PowjQEG).
 
 {% highlight JavaScript %}
 // set margins by convention
@@ -125,12 +133,12 @@ d3.csv( "https://gist.githubusercontent.com/fraziern/6ca21ed36b217894901256aeab8
   .then(createChart);
 {% endhighlight %}
 
-The baby name data I used is [here](https://gist.githubusercontent.com/fraziern/6ca21ed36b217894901256aeab822f00/raw/b96d480d27d43f1bb11c3a0fe86f641070e6ce29/popular_names_ssa.csv).
-
-### My usual constraints
+#### My usual constraints
 
 1. Build a version of the inspiration viz, simplifying if necessary to keep it relatively quick
 1. Use only vanilla HTML, CSS, and JavaScript, as well as D3.js (I used v.5.0)
 1. Where possible, use real-world raw data, and make it accessible if it's not already
 
 Give it a try!
+
+And check out [Slopegraph part 2](% link _exercises/baby_names_3.md %), where we try to improve on the results of this exercise.

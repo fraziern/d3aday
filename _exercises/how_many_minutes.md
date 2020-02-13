@@ -7,11 +7,15 @@ thumbnail_path: /assets/img/love_thumb.png
 thumbnail_alttext: Funny bar graph
 index: 01
 ---
-This exercise is to build a deceptively simple bar graph. The inspiration comes from the clever "Amount of Love According To Bands" by mattmattmatt on [GraphJam](https://cheezburger.com/2511676160/amount-of-love-according-to-bands).
+### The Inspiration
+
+This exercise is to build a deceptively simple bar graph. The inspiration comes from the clever "Amount of Love According To Bands" by mattmattmatt on [GraphJam](https://cheezburger.com/2511676160/amount-of-love-according-to-bands). Note the word wrap and the use of text-based axes.
 
 ![Funny bar graph](/assets/img/love_inspiration.png)
 
-My version is called "How Much Time Do We Need." Note a couple of key features: text-based axes, and the word wrap in the X-axis labels. (The second bar isn't exactly to scale... but I needed to make room on the Y-axis for all the labels so I fudged a bit.)
+### The Exercise
+
+My version is called "How Much Time Do We Need." (The second bar isn't exactly to scale... but I needed to make room on the Y-axis for all the labels so I fudged a bit.)
 
 ![Another funny bar graph](/assets/img/love_solution.jpg)
 
@@ -26,6 +30,10 @@ The complete data is below (JSON format). To make things easier for setting up a
   ["Scorpions","Every Minute Every Day",100]
 ]
 {% endhighlight %}
+
+To accomplish the word wrap, I borrowed heavily from Mike Bostock's technique [here.](https://bl.ocks.org/mbostock/7555321)
+
+### A Solution
 
 My solution is below, but I encourage you to attempt it first without peeking. The full code and working example can be found on [codepen](https://codepen.io/fraziern/pen/bGGWwKZ).
 
@@ -116,7 +124,7 @@ function wrap(text, width) {
 }
 {% endhighlight %}
 
-### My usual constraints
+#### My usual constraints
 
 1. Build a version of the inspiration viz, simplifying if necessary to keep it relatively quick
 1. Use only vanilla HTML, CSS, and JavaScript, as well as D3.js (I used v.5.0)
