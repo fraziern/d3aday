@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "USA Ironman Medals"
+title:  "Vertically Centered Time Series"
 date:   2019-12-10 06:38:38 -0500
-tags: custom-graph time-series
+tags: custom-graph time-series bar-graph
 thumbnail_path: /assets/img/ironman_thumb.jpg
 thumbnail_alttext: Ironman medals
 index: 02

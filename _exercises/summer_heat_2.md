@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Summer Heat II"
+title:  "Heatmap"
 date:   2019-12-10 06:38:38 -0500
 tags: heat-map datetime
 thumbnail_path: /assets/img/heatmap_solution.jpg

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Generative Art I"
+title:  "Generative Art on a Grid"
 date:   2019-12-10 06:38:38 -0500
 tags: generative-art nice-colors
 thumbnail_path: /assets/img/generative_1_inspiration_1.jpg

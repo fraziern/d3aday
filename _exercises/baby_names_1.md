@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Baby Names I"
+title:  "Selection.join and Transitions"
 date:   2019-12-10 06:38:38 -0500
 tags: animation
 thumbnail_path: /assets/img/babynames_solution.jpg

@@ -17,3 +17,5 @@ The three constraints applied to each exercise are as follows:
 1. Where possible, use real-world raw data, and make it accessible if it's not already
 
 I'd love for you to give them a try!
+
+Nick Frazier

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How Much Time Do We Need?"
+title:  "Bar Graph with Text Ticks"
 date:   2019-12-10 06:38:38 -0500
 tags: bar-graph custom-axes funny
 thumbnail_path: /assets/img/love_thumb.png
