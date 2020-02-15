@@ -167,11 +167,3 @@ d3.csv( "https://gist.githubusercontent.com/Fil/15e57d2584b618521d173d4c0088d13b
   .then(d => d.filter(el=>el.temp && first48(el.date)))
   .then(createChart);
 {% endhighlight %}
-
-#### My usual constraints
-
-1. Build a version of the inspiration viz, simplifying if necessary to keep it relatively quick
-1. Use only vanilla HTML, CSS, and JavaScript, as well as D3.js (I used v.5.0)
-1. Where possible, use real-world raw data, and make it accessible if it's not already
-
-Give it a try!

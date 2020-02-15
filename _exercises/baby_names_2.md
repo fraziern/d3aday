@@ -133,12 +133,4 @@ d3.csv( "https://gist.githubusercontent.com/fraziern/6ca21ed36b217894901256aeab8
   .then(createChart);
 {% endhighlight %}
 
-#### My usual constraints
-
-1. Build a version of the inspiration viz, simplifying if necessary to keep it relatively quick
-1. Use only vanilla HTML, CSS, and JavaScript, as well as D3.js (I used v.5.0)
-1. Where possible, use real-world raw data, and make it accessible if it's not already
-
-Give it a try!
-
 And check out [Slopegraph part 2](% link _exercises/baby_names_3.md %), where we try to improve on the results of this exercise.

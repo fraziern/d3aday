@@ -7,17 +7,17 @@ thumbnail_path: /assets/img/heatmap_solution.jpg
 thumbnail_alttext: Summer heat II
 index: 04
 ---
-One of my favorite types of visualizations is heat maps, and I wanted to create a simple version for this exercise. I based it off of [this example](https://stackoverflow.com/tags/heatmap/info) on Stack Overflow, created with Seaborn:
+### The Inspiration
+
+For this exercise, we'll be creating a crowd favorite data visualization type - the heatmap. The inspiration comes from [this example](https://stackoverflow.com/tags/heatmap/info) on Stack Overflow, created with Seaborn:
 
 ![Stack Overflow Heatmap Example](/assets/img/heatmap_inspiration.jpg)
 
-For this exercise, I re-used the Raleigh temperature data compiled for the "Summer Heat" exercise, available [here](https://gist.githubusercontent.com/Fil/15e57d2584b618521d173d4c0088d13b/raw/2f7f1a236c074635435cc7ebf9253c20a5681690/data.csv).
+### The Exercise
 
-My result looks like so:
+We'll re-use the historical monthly Raleigh temperature data compiled for a previous exercise, available [here](https://gist.githubusercontent.com/Fil/15e57d2584b618521d173d4c0088d13b/raw/2f7f1a236c074635435cc7ebf9253c20a5681690/data.csv). In this case, we don't necessarily want all the years, so we can filter it down and select, say, one year per decade. We'll stick with the inspiration's scales and put the months in the Y axis and years in the X axis. Each square will represent the average temperature for a specific month.
 
-![Raleigh NC Temperatures Heat Map](/assets/img/heatmap_solution.jpg)
-
-I thought it was a pretty straightforward exercise. Perhaps the only tricky part was realizing that I had to use UTC versions of datetime methods, or else the months would be off by 1 (since the time for each date was midnight on the first day of each month, in UTC, and using standard methods generates Eastern Time datetimes, which is 4-5 hours earlier than midnight, on the previous month). For example, to filter the data to only one year per decade, I used this function (note the UTC-flavored method):
+This is mostly a straightforward apply-scales-to-data exercise. However, the data itself can pose a subtle datetime issue to work through. If you're in the US, you will likely need to use UTC versions of datetime methods, or else the months will be off by 1. The time for each date is midnight on the first day of each month, in UTC, and using standard methods generates local datetimes, which in my time zone is 4-5 hours earlier than midnight, on the previous month. For example, to filter the data to only one year per decade, you can use this function (note the UTC-flavored method):
 
 {%highlight JavaScript %}
 function isDecade(date) {
@@ -25,7 +25,13 @@ function isDecade(date) {
 }
 {% endhighlight %}
 
-My final JavaScript code is below.
+### A Solution
+
+My result looks like so:
+
+![Raleigh NC Temperatures Heat Map](/assets/img/heatmap_solution.jpg)
+
+My final JavaScript code is below, but I encourage you to try it yourself. 
 
 {% highlight JavaScript %}
 d3.csv( "https://gist.githubusercontent.com/Fil/15e57d2584b618521d173d4c0088d13b/raw/2f7f1a236c074635435cc7ebf9253c20a5681690/data.csv",
@@ -95,12 +101,4 @@ function createChart(d) {
 }
 {% endhighlight %}
 
-My complete code and working example is available on [codepen](https://codepen.io/fraziern/pen/LYEePWe).
-
-#### My usual constraints
-
-1. Build a version of the inspiration viz, simplifying if necessary to keep it relatively quick
-1. Use only vanilla HTML, CSS, and JavaScript, as well as D3.js (I used v.5.0)
-1. Where possible, use real-world raw data, and make it accessible if it's not already
-
-Give it a try!
+Complete code and a working example are available on [codepen](https://codepen.io/fraziern/pen/LYEePWe).

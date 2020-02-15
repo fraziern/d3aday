@@ -95,10 +95,3 @@ The complete HTML/CSS/JS code and working example are on [codepen](https://codep
 
 The baby name data I used is [here](https://gist.githubusercontent.com/fraziern/6ca21ed36b217894901256aeab822f00/raw/b96d480d27d43f1bb11c3a0fe86f641070e6ce29/popular_names_ssa.csv).
 
-#### My usual constraints
-
-1. Build a version of the inspiration viz, simplifying if necessary to keep it relatively quick
-1. Use only vanilla HTML, CSS, and JavaScript, as well as D3.js (I used v.5.0)
-1. Where possible, use real-world raw data, and make it accessible if it's not already
-
-Give it a try!
