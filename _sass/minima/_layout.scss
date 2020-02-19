@@ -4,12 +4,13 @@
 .site-header {
   width: $content-width;
   margin: 0 auto;
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
+  border-top: 10px solid $grey-color-dark;
+  // border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
   padding: 0 ($spacing-unit / 2);
 
-  background: $header-color;
+  background: $background-color-dark;
+  color: $title-text-color;
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -21,7 +22,7 @@
 
 .site-title {
   @include relative-font-size(2);
-  font: $title-font-family;
+  font-family: $title-font-family;
   font-weight: 700;
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
@@ -30,13 +31,14 @@
 
   &,
   &:visited {
-    color: $text-color;
+    color: $title-text-color;
   }
 }
 
 .site-nav {
   // float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
+  font-family: $title-font-family;
 
   .nav-trigger {
       display: none;
@@ -116,8 +118,9 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
+  border-top: 5px solid $grey-color-dark;
   padding: $spacing-unit 0;
+  background: $background-color-dark;
 }
 
 .footer-heading {
@@ -129,6 +132,10 @@
 .social-media-list {
   list-style: none;
   margin-left: 0;
+
+  a, a:visited {
+    color: $brand-color;
+  }
 }
 
 .footer-col-wrapper {
@@ -219,6 +226,11 @@
     width: 300px;
     height: 200px;
     margin-bottom: $spacing-unit / 2;
+    border-top: 5px solid $background-color;
+
+    &:hover {
+      border-top: 5px solid $grey-color-light;
+    }
   }
 
   h5 {
@@ -244,6 +256,11 @@
   @include relative-font-size(1.5);
 }
 
+.post-index {
+  color: $brand-color;
+  font-family: $title-font-family;
+}
+
 
 
 /**
@@ -255,8 +272,9 @@
 
 .post-title {
   @include relative-font-size(2.625);
-  font: $title-font-family;
-  font-weight: 700;
+  font-family: $title-font-family;
+  font-weight: 400;
+  color: $title-text-color;
   letter-spacing: -1px;
   line-height: 1;
 
@@ -267,6 +285,16 @@
 
 .post-content {
   margin-bottom: $spacing-unit;
+  @include relative-font-size(1.125);
+
+  a, a:visited {
+    background-color: $background-color-dark;
+  }
+
+  h2, h3, h4 {
+    font-family: $title-font-family;
+    color: $title-text-color;
+  }
 
   h2 {
     @include relative-font-size(2);

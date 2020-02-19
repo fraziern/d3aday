@@ -26,6 +26,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 
@@ -106,13 +107,13 @@ a {
   color: $brand-color;
   text-decoration: none;
 
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
+  // &:visited {
+  //   color: darken($brand-color, 15%);
+  // }
 
   &:hover {
     color: $text-color;
-    text-decoration: underline;
+    // text-decoration: underline;
   }
 
   .social-media-list &:hover {
@@ -133,7 +134,7 @@ blockquote {
   border-left: 4px solid $grey-color-light;
   padding-left: $spacing-unit / 2;
   @include relative-font-size(1.125);
-  letter-spacing: -1px;
+  // letter-spacing: 1px;
   font-style: italic;
 
   > :last-child {

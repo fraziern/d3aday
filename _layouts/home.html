@@ -16,7 +16,7 @@ layout: default
         <a class="post-link" href="{{ exercise.url | relative_url }}">
           <img src="{{ exercise.thumbnail_path }}" alt="{{ exercise.thumbnail_alttext }}">
         </a>
-          <h6>{{ forloop.index | prepend: '0' | slice: -2, 2 }}</h6>
+          <h6 class="post-index">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</h6>
           <h5>{{ exercise.title | escape }}</h5>
       </li>
       {%- endfor -%}
