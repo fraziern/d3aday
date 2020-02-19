@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Compound Scatter=Bar Graph"
+title:  "Compound Scatter/Bar Graph"
 date:   2019-12-10 06:38:38 -0500
 tags: bar-graph small-multiples scatterplot
 thumbnail_path: /assets/img/summerheat_thumb.jpg
