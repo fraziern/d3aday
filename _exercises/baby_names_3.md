@@ -7,7 +7,7 @@ thumbnail_path: /assets/img/babynames_3_solution.jpg
 thumbnail_alttext: Stack Exchange
 index: 8
 ---
-In the [first slopegraph exercise](% link _exercises/baby_names_2.md %), I created this visualization of top 10 female baby names.
+In the [first slopegraph exercise]({% link _exercises/baby_names_2.md %}), I created this visualization of top 10 female baby names.
 
 ![Baby Names Rankings](/assets/img/babynames_2_solution.jpg)
 
