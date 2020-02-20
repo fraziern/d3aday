@@ -19,6 +19,12 @@ My version is called "How Much Time Do We Need." (The second bar isn't exactly t
 
 ![Another funny bar graph](/assets/img/love_solution.jpg)
 
+Most of the steps involved in building this visualization should be familiar to you if you've got a little experience creating D3 bar graphs. But there are a few challenges particular to this one:
+
+1. Setting the y-axis scale correctly, since you have numeric data with text labels
+1. Adding the y axis itself
+1. Managing some word wrap (definitely the hardest part)
+
 The complete data is below (JSON format). To make things easier for setting up a quick word wrap routine, I added a `/` where a line break should go, in the X-axis labels.
 
 {% highlight json %}
@@ -31,9 +37,9 @@ The complete data is below (JSON format). To make things easier for setting up a
 ]
 {% endhighlight %}
 
-To accomplish the word wrap, I borrowed heavily from Mike Bostock's technique [here.](https://bl.ocks.org/mbostock/7555321)
-
 ### A Solution
+
+To accomplish the word wrap, I borrowed heavily from Mike Bostock's technique [here.](https://bl.ocks.org/mbostock/7555321) Since we already have line break delimiters in the data, we can simplify Bostock's code quite a bit.
 
 My solution is below, but I encourage you to attempt it first without peeking. The full code and working example can be found on [codepen](https://codepen.io/fraziern/pen/bGGWwKZ).
 
