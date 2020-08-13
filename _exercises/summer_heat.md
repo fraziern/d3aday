@@ -77,7 +77,7 @@ function createChart(d) {
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      .attr('transform', `translate(${margin.left}, ${margin.top})`);
   
   let years = d.map(el=>el.date.getFullYear()),
       temps = d.map(el=>el.temp);

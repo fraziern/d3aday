@@ -47,7 +47,7 @@ var svg = d3.select(".chart")
 
 var chart = svg
   .append("g")
-  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
 // set the ranges
 var x = d3.scaleLinear().range([0, width]);
@@ -103,7 +103,7 @@ function createChart(rawData) {
  
   var labels = svg
     .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr('transform', `translate(${margin.left}, ${margin.top})`);
   
   labels.selectAll("text")
     .data(labelPositions)
@@ -118,14 +118,14 @@ function createChart(rawData) {
   let yAxis = d3.axisLeft(y);
   
   svg.append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .attr('transform', `translate(${margin.left}, ${margin.top})`)
     .call(yAxis);
   
   let xAxis = d3.axisBottom(x)
     .tickFormat(d3.format(".0f"));
   
   svg.append("g")
-    .attr("transform", "translate(" + margin.left + "," + (margin.top + height + 10) + ")")
+    .attr('transform', `translate(${margin.left}, ${margin.top + height + 10})`)
     .call(xAxis);
  }
 

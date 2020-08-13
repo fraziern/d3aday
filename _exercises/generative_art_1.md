@@ -110,7 +110,7 @@ function createGrid(svg) {
     .range([0, width]);
   
   svg.append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .attr('transform', `translate(${margin.left}, ${margin.top})`)
     .attr("class", "xGrid")
     .selectAll("rect")  
     .data(d3.range(12))
@@ -125,7 +125,7 @@ function createGrid(svg) {
     .range([0, height]);
   
   svg.append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .attr('transform', `translate(${margin.left}, ${margin.top})`)
     .attr("class", "yGrid")
     .selectAll("rect")  
     .data(d3.range(12))
@@ -149,7 +149,7 @@ function createChart(d) {
   // add circles
   let chart = svg
     .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      .attr('transform', `translate(${margin.left}, ${margin.top})`);
       
   chart.selectAll("circle")
     .data(d)

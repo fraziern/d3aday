@@ -46,7 +46,7 @@ const margin = {top: 0, right: 30, bottom: 20, left: 90},
         .attr("height", height + margin.top + margin.bottom);
 
 var chart = svg.append("g")
-  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
 const URL = "https://gist.githubusercontent.com/fraziern/084ab4f8535083ebf90ada173faae054/raw/19f44640f4f193850a1392305a1824e922214d40/foodcalories.csv";
 

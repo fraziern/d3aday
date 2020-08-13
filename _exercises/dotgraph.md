@@ -68,7 +68,7 @@ const margin = {top: 50, right: 30, bottom: 20, left: 90},
         .attr("height", height + margin.top + margin.bottom);
 
 var chart = svg.append("g")
-  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
 const URL = "https://gist.githubusercontent.com/fraziern/2d8425e0d205de3729e6dc9049a8914d/raw/2c27c55fa50a9935049fc2d85494f18c05490f09/always-mask-county-state.csv";
 

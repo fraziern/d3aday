@@ -47,7 +47,7 @@ function createChart(data) {
   
   var chart = svg
     .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      .attr('transform', `translate(${margin.left}, ${margin.top})`);
   
   // scale
   let yAxis = d3.axisLeft(
@@ -56,7 +56,7 @@ function createChart(data) {
     .range([0, textHeight * 9]));
   
   svg.append("g")
-    .attr("transform", "translate(" + margin.left + "," + (margin.top + 20) + ")")
+    .attr('transform', `translate(${margin.left}, ${margin.top + 20})`)
     .call(yAxis);
                          
   // munge data

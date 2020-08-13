@@ -57,7 +57,7 @@ var chart = d3.select(".chart")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
 var maxValue = d3.max(data);
 
@@ -82,7 +82,7 @@ var barContainer = chart.append("g")
 var bar = barContainer.selectAll("g")
     .data(data)
   .enter().append("g")
-    .attr("transform", (d, i) => "translate(" + x(x_labels[i]) + ",0)");
+    .attr("transform", (d, i) => `translate($(x(x_labels[i])),0)`);
 
 bar.append("rect")
     .attr("width", x.bandwidth)
@@ -91,7 +91,7 @@ bar.append("rect")
 
 chart.append("g")
     .attr("class", "x axis")
-    .attr("transform", "translate(0," + height + ")")
+    .attr("transform", `translate(0,$(height))`)
     .call(d3.axisBottom(x))
     .selectAll(".tick text")
       .call(wrap, x.bandwidth());
@@ -102,7 +102,7 @@ var yAxisContainer = chart.append("g")
 var yAxis = yAxisContainer.selectAll("g")
   .data(data)
   .enter().append("g")
-  .attr("transform", (d, i) => "translate(-5," + y(d) + ")");
+  .attr("transform", (d, i) => `translate(-5,$(y(d)))`);
 
 yAxis.append("text")
   .text((d,i)=>y_labels[i])
